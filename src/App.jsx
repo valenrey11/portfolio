@@ -1,3 +1,4 @@
+import { Link, Route } from "wouter";
 import { useState } from 'react'
 import { Header } from './components/header/index.jsx';
 import { HomePage } from './pages/home-page/index.jsx';
@@ -8,8 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <HomePage />
+      <Route path="/" component={HomePage} />
     </div>
   )
 }

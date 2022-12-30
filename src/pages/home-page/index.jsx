@@ -11,12 +11,14 @@ import reactimg from "../../assets/react.svg"
 import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 import github from '../../assets/Github.png'
+import { Header } from "../../components/header";
 const colorPredefinido = 'bg-[#9F3F4D]'
 
 // bg-gray-200
 export function HomePage() {
     return (
         <>
+            <Header />
             <section id="home" className="flex w-full gap-20 px-40 py-10">
                 <div className="firts-part-container w-full grid">
                     <img src={valen} alt="valen" className="drop-shadow-2xl rounded-full bg-[#9F3F4D]/80" />
