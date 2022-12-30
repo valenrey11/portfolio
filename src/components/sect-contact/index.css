@@ -1,0 +1,11 @@
+.input-contact:focus::placeholder {
+  color: transparent;
+}
+.btn-enviar {
+  background: linear-gradient(to left, #e5e7eb 50%, #2a729e 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+}
+.btn-enviar:hover {
+  background-position: left;
+}
