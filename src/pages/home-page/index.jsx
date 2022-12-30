@@ -14,7 +14,6 @@ import github from '../../assets/Github.png'
 import { Header } from "../../components/header";
 const colorPredefinido = 'bg-[#9F3F4D]'
 
-// bg-gray-200
 export function HomePage() {
     return (
         <>
