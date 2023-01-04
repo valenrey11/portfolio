@@ -21,8 +21,8 @@ export function HomePage() {
             <section id="home" className=" w-full px-10 flex flex-col gap-4
             sm:flex-row  sm:gap-20 sm:px-40 sm:py-10">
                 <div className="firts-part-container w-full grid sm:gap-10">
-                    <div className="py-5">
-                        <img src={valen} alt="valen" className="drop-shadow-2xl rounded-full bg-[#9F3F4D]/80" />
+                    <div className="clip py-5 drop-shadow-2xl">
+                        <img src={valen} alt="valen" className=" rounded-full bg-[#9F3F4D]/80" />
                     </div>
                     <article className="w-full rounded-md h-full flex justify-evenly">
                         <a href="https://github.com/valenrey11" target='_blank'>

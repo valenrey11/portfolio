@@ -21,8 +21,9 @@ export function SectionContact() {
                 console.log(error.text);
             });
     };
-    return (<section id='contact' className='px-10 py-20 w-full flex justify-between items-center'>
-        <form ref={form} onSubmit={sendEmail} className='bg-[#9F3F4D] px-10 py-5 flex flex-col gap-5 rounded-md shadow-lg
+    return (<section id='contact' className='px-10 pb-10 pt-0 w-full flex flex-col  gap-5 justify-between items-center
+                sm:pt-10 sm:py-20 sm:gap-0 sm:flex-row'>
+        <form ref={form} onSubmit={sendEmail} className='bg-[#9F3F4D] px-5 sm:px-10 py-7 sm:py-5 flex flex-col gap-5 rounded-md shadow-lg
         sm:flex-row sm:gap-20' >
             <div className='w-full flex flex-col gap-6 rounded-md'>
                 <fieldset className='w-full flex flex-col text-sm justify-between'>
@@ -42,8 +43,8 @@ export function SectionContact() {
                 {/* hover:bg-gray-200 hover:text-black */}
             </div>
         </form>
-        <article className='hidden bg-[#9F3F4D]/70 px-10 py-5 rounded-tl-full rounded-br-full rounded-tr-full
-        sm:flex'>
+        <article className='hidden bg-[#9F3F4D]/60 px-10 py-5 rounded-lg
+        sm:flex sm:flex-col'>
             <h5 className="text-center text-2xl font-smedium my-3">Skills</h5>
             <div className="img-container grid grid-cols-3 gap-5">
                 <img src={html} alt="html" className="w-10 hover:scale-110" />
