@@ -17,6 +17,13 @@ export function ProyectCard({ proyectName, proyectImg }) {
         linkToProyect = PAGE_MELI
 
     } else { linkToProyect = '' }
+
+    const proyectIcons = <div className=".cosita flex flex-wrap gap-1 justify-between w-full py-1 items-center">
+        <img src={html} alt="html" className="w-7" />
+        <img src={css} alt="html" className="w-7" />
+        <img src={js} alt="html" className="w-7 rounded" />
+        <img src={reactimg} alt="html" className="cosita w-7 rounded" />
+    </div>
     return (<li className="proyecto flex flex-col text-left shadow-md border-solid border-gray-500 rounded-md w-full">
         <img src={proyectImg} alt="" className="w-full overflow-auto rounded-tl-md rounded-tr-md" />
 
@@ -28,13 +35,7 @@ export function ProyectCard({ proyectName, proyectImg }) {
                 hover:rounded-md flex hover:text-gray-900 border-b-2 border-gray-200 hover:bg-gray-200">
                     Link <img src={maximize} alt="maximize" className="w-4 h-4 ml-3" />
                 </a>
-                <div className="flex flex-wrap gap-1 justify-between w-full py-1 items-center">
-                    <img src={html} alt="html" className="w-7" />
-                    <img src={css} alt="html" className="w-7" />
-                    <img src={js} alt="html" className="w-7 rounded" />
-                    <img src={reactimg} alt="html" className="w-7 rounded" />
-                </div>
-
+                {proyectName === 'Copia Mercado Libre' ? proyectIcons : proyectIcons.props.children.slice(0, -1)}
             </div>
         </div>
     </li >)

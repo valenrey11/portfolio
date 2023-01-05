@@ -21,10 +21,14 @@ export function SectionContact() {
                 console.log(error.text);
             });
     };
-    return (<section id='contact' className='px-10 pb-10 pt-0 w-full flex flex-col  gap-5 justify-between items-center
-                sm:pt-10 sm:py-20 sm:gap-0 sm:flex-row'>
-        <form ref={form} onSubmit={sendEmail} className='bg-[#9F3F4D] px-5 sm:px-10 py-7 sm:py-5 flex flex-col gap-5 rounded-md shadow-lg
+    return (<section id='contact' className='px-3 pb-10 pt-0 w-full flex flex-col justify-between items-center
+                sm:pt-10 sm:py-20 sm:gap-0 sm:flex-row sm:px-10'>
+
+        <form ref={form} onSubmit={sendEmail}
+            className='w-full bg-[#9F3F4D] px-5 sm:px-10 py-7 sm:py-5 flex flex-col gap-5 rounded-md shadow-lg
         sm:flex-row sm:gap-20' >
+            <p className='text-2xl font-semibold text-white'>Podes contactarte por este medio</p>
+
             <div className='w-full flex flex-col gap-6 rounded-md'>
                 <fieldset className='w-full flex flex-col text-sm justify-between'>
                     <input type="text" name="user_name" placeholder='Name' className='input-contact w-full p-2 rounded-md h-10 focus:outline-none' />
@@ -38,7 +42,7 @@ export function SectionContact() {
             </div>
             <div className='flex flex-col gap-5 justify-between
             sm:gap-0'>
-                <p className='text-2xl font-semibold text-white'>Podes contactarte por este medio</p>
+                <p className='text-2xl font-semibold text-white hidden sm:inline'>Podes contactarte por este medio</p>
                 <button className='btn-enviar bg-sky-800/60 p-2 w-full text-black hover:text-white text-xl rounded-md '>Enviar email</button>
                 {/* hover:bg-gray-200 hover:text-black */}
             </div>
