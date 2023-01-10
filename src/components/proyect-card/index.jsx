@@ -28,7 +28,7 @@ export function ProyectCard({ proyectName, proyectImg }) {
         <img src={proyectImg} alt="" className="w-full overflow-auto rounded-tl-md rounded-tr-md" />
 
         <div className="info-container bg-gray-200 rounded-br-md rounded-bl-md info-cont p-3 pt-0 flex flex-col gap-2 w-full">
-            <h5 className="text-xl w-full letrita mt-2 ">{proyectName}</h5>
+            <h5 className="text-xl w-full mt-2 ">{proyectName}</h5>
 
             <div className="overlay flex gap-5 w-full rounded-br-md rounded-bl-md items-center">
                 <a href={linkToProyect} className="w-1/2 p-1 text-center text-md text-white justify-center items-baseline

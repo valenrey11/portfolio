@@ -21,13 +21,13 @@ export function SectionContact() {
                 console.log(error.text);
             });
     };
-    return (<section id='contact' className='px-3 pb-10 pt-0 w-full flex flex-col justify-between items-center
-                sm:pt-10 sm:py-20 sm:gap-0 sm:flex-row sm:px-10'>
+    return (<section id='contact' className='px-3 pb-10 pt-0 w-full flex flex-col
+                sm:pt-10 sm:py-20 sm:flex-row sm:px-10 sm:justify-evenly'>
 
         <form ref={form} onSubmit={sendEmail}
             className='w-full bg-[#9F3F4D] px-5 sm:px-10 py-7 sm:py-5 flex flex-col gap-5 rounded-md shadow-lg
-        sm:flex-row sm:gap-20' >
-            <p className='text-2xl font-semibold text-white'>Podes contactarte por este medio</p>
+                         sm:flex-row sm:gap-20 sm:max-w-2xl' >
+            <p className='text-2xl font-semibold text-white sm:hidden'>Podes contactarte por este medio</p>
 
             <div className='w-full flex flex-col gap-6 rounded-md'>
                 <fieldset className='w-full flex flex-col text-sm justify-between'>
@@ -44,7 +44,6 @@ export function SectionContact() {
             sm:gap-0'>
                 <p className='text-2xl font-semibold text-white hidden sm:inline'>Podes contactarte por este medio</p>
                 <button className='btn-enviar bg-sky-800/60 p-2 w-full text-black hover:text-white text-xl rounded-md '>Enviar email</button>
-                {/* hover:bg-gray-200 hover:text-black */}
             </div>
         </form>
         <article className='hidden bg-[#9F3F4D]/60 px-10 py-5 rounded-lg
