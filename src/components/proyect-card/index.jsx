@@ -31,7 +31,7 @@ export function ProyectCard({ proyectName, proyectImg }) {
             <h5 className="text-xl w-full mt-2 ">{proyectName}</h5>
 
             <div className="overlay flex gap-5 w-full rounded-br-md rounded-bl-md items-center">
-                <a href={linkToProyect} className="w-1/2 p-1 text-center text-md text-white justify-center items-baseline
+                <a href={linkToProyect} target="_blank" className="w-1/2 p-1 text-center text-md text-white justify-center items-baseline
                 hover:rounded-md flex hover:text-gray-900 border-b-2 border-gray-200 hover:bg-gray-200">
                     Link <img src={maximize} alt="maximize" className="w-4 h-4 ml-3" />
                 </a>

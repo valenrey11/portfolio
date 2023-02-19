@@ -21,17 +21,27 @@ export function SectionContact() {
                 console.log(error.text);
             });
     };
+    const HandleClick = () => {
+        const name = document.querySelector(".input-name")
+        const allInputFields = document.querySelectorAll(".input-contact")
+        for (let i = 0; i < allInputFields.length; i++) {
+            const inp = allInputFields[i];
+            inp.value = ''
+        }
+        alert(`Gracias ${name.value} por contactarte conmigo!`)
+    }
     return (<section id='contact' className='px-3 pb-10 pt-0 w-full flex flex-col
                 sm:pt-10 sm:py-20 sm:flex-row sm:px-10 sm:justify-evenly'>
 
-        <form ref={form} onSubmit={sendEmail}
+        <form ref={form}
+            onSubmit={sendEmail}
             className='w-full bg-[#9F3F4D] px-5 sm:px-10 py-7 sm:py-5 flex flex-col gap-5 rounded-md shadow-lg
                          sm:flex-row sm:gap-20 sm:max-w-2xl' >
             <p className='text-2xl font-semibold text-white sm:hidden'>Podes contactarte por este medio</p>
 
             <div className='w-full flex flex-col gap-6 rounded-md'>
                 <fieldset className='w-full flex flex-col text-sm justify-between'>
-                    <input type="text" name="user_name" placeholder='Name' className='input-contact w-full p-2 rounded-md h-10 focus:outline-none' />
+                    <input type="text" name="user_name" placeholder='Name' className='input-contact input-name w-full p-2 rounded-md h-10 focus:outline-none' />
                 </fieldset>
                 <fieldset className='w-full rounded-md flex items-center justify-between'>
                     <input type="email" name="user_email" placeholder='Email' className='input-contact w-full p-2 rounded-md h-10 focus:outline-none' />
@@ -43,7 +53,7 @@ export function SectionContact() {
             <div className='flex flex-col gap-5 justify-between
             sm:gap-0'>
                 <p className='text-2xl font-semibold text-white hidden sm:inline'>Podes contactarte por este medio</p>
-                <button className='btn-enviar bg-sky-800/60 p-2 w-full text-black hover:text-white text-xl rounded-md '>Enviar email</button>
+                <button onClick={HandleClick} className='btn-enviar bg-sky-800/60 p-2 w-full text-black hover:text-white text-xl rounded-md '>Enviar email</button>
             </div>
         </form>
         <article className='hidden bg-[#9F3F4D]/60 px-10 py-5 rounded-lg

@@ -9,6 +9,7 @@ import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 import github from '../../assets/Github.png'
 import whatsapp from '../../assets/whatsapp.png'
+import cv from '../../assets/CV-Valentin-Uriel-Rey.pdf'
 const colorPredefinido = 'bg-[#9F3F4D]'
 
 export function HomePage() {
@@ -20,7 +21,7 @@ export function HomePage() {
                 <div className="firts-part-container w-full grid sm:gap-10 align-middle">
                     <div className="clip py-5 w-full flex content-center">
                         <div className="img-cont h-52 w-52 my-0 mx-auto rounded-full">
-                            <img src={valen} alt="valen" className="img-page rounded-full sm:h-full bg-[#9F3F4D]/80 drop-shadow-2xl" />
+                            <img src={valen} alt="valen" className="img-page rounded-full bg-[#9F3F4D]/80 drop-shadow-2xl" />
                         </div>
                         <div className="w-11 h-full flex flex-col justify-around sm:hidden">
                             <a href="https://github.com/valenrey11" target='_blank' className=" inline-flex justify-center">
@@ -52,9 +53,12 @@ export function HomePage() {
                 <article className="grid gap-5 rounded-lg shadow-xl bg-sky-800/50 p-3 pt-4
                 sm:p-5 sm:pt-5">
                     <h1 className="text-4xl text-gray-100 font-sans">Hola! Soy Valentin Rey</h1>
-                    <p className="text-xl text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea iste, earum soluta dicta, blanditiis eius doloribus libero pariatur dolores quidem at reprehenderit dignissimos aliquam culpa facere totam quas fugit quod?</p>
-                    <p className="text-xl text-gray-200">Lorem ipsum dolor es quidem at reprehenderit dignissimos aliquam culpa facere totam quas fugit quod?</p>
-                    <a href="#contact" className="hover:opacity-75 text-xl w-40 text-center rounded-md py-1 text-gray-200 border-solid border-2 hover:border-transparent hover:bg-[#9F3F4D] hover:text-white self-end ml-auto mr-1">Contactame</a>
+                    <p className="text-xl text-gray-200">Soy un desarrollador <span className="pulsate">front-end</span> con conocimientos en HTML, CSS, JavaScript, React y Tailwind. Me caracterizo por ser una persona muy <span className="pulsate">sociable</span> y con una gran capacidad resolutiva, lo que me permite trabajar en equipo de manera efectiva y aportar mis conocimientos a un grupo de trabajo.</p>
+                    <p className="text-xl text-gray-200"> Estoy siempre dispuesto a aprender nuevas <span className="pulsate">tecnologías</span> y encontrar soluciones a los desafíos que se me presenten.</p>
+                    <div className="flex ml-auto gap-5">
+                        <a href={cv} download className="flex place-items-center px-4 text-xl text-center rounded-md text-gray-200 bg-[#9F3F4D]/80 hover:text-black hover:bg-gray-300 hover:cursor-pointer">Download CV</a>
+                        <a href="#contact" className="hover:opacity-75 text-xl place-items-center px-4 text-center rounded-md py-1 text-gray-200 border-solid border-2 hover:border-transparent hover:bg-[#9F3F4D] hover:text-white">Contactame</a>
+                    </div>
                 </article>
             </section >
             <SectionProyect />
