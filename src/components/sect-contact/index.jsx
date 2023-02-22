@@ -11,25 +11,35 @@ import tailwind from "../../assets/tail.webp"
 
 export function SectionContact() {
     const form = useRef();
-    const sendEmail = (e) => {
-        e.preventDefault();
-        console.log(form.current);
-        emailjs.sendForm('service_zpccolx', 'template_fwtlh5v', form.current, 'xA7EGf8znRZTsLlXo')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    };
     const HandleClick = () => {
         const name = document.querySelector(".input-name")
         const allInputFields = document.querySelectorAll(".input-contact")
+        alert(`Gracias ${name.value} por contactarte conmigo!`)
         for (let i = 0; i < allInputFields.length; i++) {
             const inp = allInputFields[i];
             inp.value = ''
         }
-        alert(`Gracias ${name.value} por contactarte conmigo!`)
     }
+    const sendEmail = (e) => {
+        e.preventDefault();
+        const allInputValues = e.target.querySelectorAll(".input-contact")
+        const enviarEmail = () => {
+            emailjs.sendForm('service_zpccolx', 'template_fwtlh5v', form.current, 'xA7EGf8znRZTsLlXo')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                })
+        }
+        const condition = allInputValues[0].value === '' || allInputValues[1].value === '' || allInputValues[2].value === ''
+        if (condition) {
+            return alert('falta completar el formulario')
+        } else {
+            enviarEmail()
+            HandleClick()
+        }
+    }
+
     return (<section id='contact' className='px-3 pb-10 pt-0 w-full flex flex-col
                 sm:pt-10 sm:py-20 sm:flex-row sm:px-10 sm:justify-evenly'>
 
@@ -53,7 +63,7 @@ export function SectionContact() {
             <div className='flex flex-col gap-5 justify-between
             sm:gap-0'>
                 <p className='text-2xl font-semibold text-white hidden sm:inline'>Podes contactarte por este medio</p>
-                <button onClick={HandleClick} className='btn-enviar bg-sky-800/60 p-2 w-full text-black hover:text-white text-xl rounded-md '>Enviar email</button>
+                <button className='btn-enviar bg-sky-800/60 p-2 w-full text-black hover:text-white text-xl rounded-md '>Enviar email</button>
             </div>
         </form>
         <article className='hidden bg-[#9F3F4D]/60 px-10 py-5 rounded-lg
@@ -70,5 +80,4 @@ export function SectionContact() {
             </div>
         </article>
     </section>)
-
 }
