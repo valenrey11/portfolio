@@ -1,6 +1,7 @@
 import { ProyectCard } from "../proyect-card";
 import mercadoLibre from "../../assets/ML-thumbnail.jpg"
 import rockPaper from "../../assets/rockPaper.jpg"
+import christmas from "../../assets/christmas.jpg"
 
 export function SectionProyect() {
     return (<section id="proyectos" className="h-2/3 py-10 w-full px-3
@@ -12,7 +13,7 @@ export function SectionProyect() {
             sm:flex-row mt-8 gap-10 sm:gap-20 w-full">
                 <ProyectCard proyectName='Copia Mercado Libre' proyectImg={mercadoLibre} />
                 <ProyectCard proyectName='Rock Paper Scissors' proyectImg={rockPaper} />
-                <ProyectCard proyectName='Copia Mercado Libre' proyectImg={mercadoLibre} />
+                <ProyectCard proyectName='Christmas Gifts' proyectImg={christmas} />
             </ul>
         </article>
     </section>)
