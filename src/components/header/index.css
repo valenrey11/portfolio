@@ -1,0 +1,73 @@
+#menu-button {
+  display: flex;
+  flex-direction: column;
+  width: 2.5rem;
+  height: 2rem;
+  justify-content: space-between;
+}
+#menu-button > div {
+  background-color: black;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 0.5s;
+  transform-origin: right;
+}
+@media (min-width: 500px) {
+  #menu-button {
+    display: none;
+  }
+}
+
+.changed div:first-child {
+  transform: rotate(-45deg);
+}
+.changed div:nth-child(2) {
+  opacity: 0;
+}
+.changed div:last-child {
+  transform: rotate(45deg);
+}
+.menu-options {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  background-color: black;
+  width: 0%;
+  height: calc(100vh - 48px);
+  top: 48px;
+  right: 0px;
+  transition: all 0.5s;
+}
+
+.change-display {
+  width: 100%;
+}
+
+#header-home,
+#header-proy,
+#header-contact {
+  animation: pintar;
+  animation-duration: 0.5s;
+  transition: ease-in;
+}
+#header-home {
+  animation-delay: 0.2s;
+}
+#header-proy {
+  animation-delay: 0.4s;
+}
+#header-contact {
+  animation-delay: 0.6s;
+}
+
+@keyframes pintar {
+  0% {
+    background-color: transparent;
+    color: white;
+  }
+  100% {
+    background-color: #9f3f4d;
+    color: white;
+  }
+}
